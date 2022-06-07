@@ -4,8 +4,9 @@ function getResult(e) {
     e.preventDefault();
 
     let input = document.getElementById("testingapi-in").value;
+    console.log(input);
 
-    fetch(`http://127.0.0.1:8000/`, {method: "GET"})
-        .then(res => {res.json()})
+    fetch(`http://192.168.0.9:8000/${input}`, {method: "GET"})
+        .then(res => res.json())
         .then(data => console.log(data))
 }
