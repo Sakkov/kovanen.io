@@ -1,0 +1,96 @@
+:root {
+    --lightColor1: rgba(255, 246, 235, 0.8);
+    --lightColor2: rgb(202, 241, 222);
+    --mediumColor1: rgb(255, 225, 185);
+    --mediumColor1T: rgba(255, 225, 185, 0.8);
+    --mediumColor2: rgb(166, 230, 199);
+    --mediumDarkColor1: rgb(241, 201, 111);
+    --highlightColor1: rgb(255, 99, 71);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    line-height: 1.65;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    word-wrap: break-word;
+    letter-spacing: 2px;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    min-height: 100vh;
+    background: url(/Media/background_stars.jpg);
+    filter: blur(2px);
+    filter: contrast(150%);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main__container {
+    padding-top: 50px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.main__content {
+    padding: 20px;
+    text-align: center;
+}
+
+.main__hero-frame {
+    text-align: center;
+    margin: auto;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.main__hero h1 {
+    
+    display: block;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 1;
+    background-color: rgba(0, 255, 191);
+    background: linear-gradient(17deg, rgb(234, 0, 255), rgb(0, 255, 191));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+}
+
+.main__hero h2{
+    display: block;
+    font-weight: 300;
+    font-size: 24px;
+    background-color: rgb(255 203 49);
+    background: radial-gradient(ellipse at top, rgb(255, 215, 96)#e66465, transparent),
+                radial-gradient(ellipse at bottom, rgb(255 203 49)#4d9f0c, transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    background-size: 100%;
+    text-transform: uppercase;
+}
+
+.main__content-frame {
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+}
