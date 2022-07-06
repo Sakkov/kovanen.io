@@ -1,11 +1,12 @@
 :root {
-    --lightColor1: rgba(255, 246, 235, 0.8);
-    --lightColor2: rgb(202, 241, 222);
-    --mediumColor1: rgb(255, 225, 185);
-    --mediumColor1T: rgba(255, 225, 185, 0.8);
-    --mediumColor2: rgb(166, 230, 199);
-    --mediumDarkColor1: rgb(241, 201, 111);
-    --highlightColor1: rgb(255, 99, 71);
+    --lightColor1: rgb(253, 235, 255);
+    --lightColor2: rgb(215, 255, 245);
+    --mediumColor1: rgb(246, 152, 255);
+    --mediumColor1T: rgba(246, 152, 255, 0.8);
+    --mediumColor2: rgb(152, 255, 229);
+    --mediumColor2T: rgba(152, 255, 229, 0.8);
+    --highlightColor1: rgb(234, 0, 255);
+    --highlightColor2: rgb(0, 255, 191);
 }
 
 * {
@@ -93,4 +94,18 @@ body {
     display: inline-block;
     text-align: left;
     padding: 10px;
+}
+
+a {
+    color: var(--highlightColor2);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--highlightColor1);
+}
+
+p {
+    text-align: center;
+    padding: 10px 0;
 }

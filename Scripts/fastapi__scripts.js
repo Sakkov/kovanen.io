@@ -15,6 +15,6 @@
 //         })
 // }
 
-fetch(`http://192.168.0.9:8000/increment-count`, {method: "GET"})
+fetch(`https://visitor-count-kovanen.herokuapp.com/increment-count`, {method: "GET"})
     .then(res => res.json())
     .then(data => document.getElementById("count").innerHTML = data)
