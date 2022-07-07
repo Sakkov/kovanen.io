@@ -4,4 +4,14 @@
 
 #count {
     font-size: 50px;
+    text-align: center;
+}
+
+.loading {
+    font-size: large;
+    height: 80px;
+}
+
+.loading p {
+    padding: 0;
 }

@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;900&display=swap" rel="stylesheet">
-    <title>FastApi testing | Kovanen.io</title>
+    <title>FastApi/PostgreSQL testing | Kovanen.io</title>
     <py-env>
     </py-env>
 </head>
@@ -38,15 +38,20 @@
                             kovanen.io
                         </h1>
                         <h2>
-                            FastApi testing
+                            FastApi/PostgreSQL testing
                         </h2>
                     </div>
                 </div>
             </div>
             <div class="main__content">
                 <div class="main__content-frame">
-                    <p>This page counts the number of visits:</p>
-                    <p id="count"></p>
+                    <p>This page counts the number of visits using fastapi and PostgreSQL:</p>
+                    <div id="count">
+                        <div class="loading">
+                            <p>Loading...</p>
+                            <p>If you have time to read this message something went wrong. Please refresh the page.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
