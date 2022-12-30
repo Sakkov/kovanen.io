@@ -15,6 +15,6 @@
 //         })
 // }
 
-fetch(`https://visitor-count-kovanen.herokuapp.com/increment-count`, {method: "GET"})
+fetch(`https://a5om8b.deta.dev/increment-count`, {method: "GET"})
     .then(res => res.json())
     .then(data => document.getElementById("count").innerHTML = data)
