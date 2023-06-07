@@ -1,4 +1,4 @@
 # kovanen.io
-A website to test styles, features etc
+A website
 
 You can visit the website at https://kovanen.io
