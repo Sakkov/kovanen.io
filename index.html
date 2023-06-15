@@ -54,20 +54,14 @@
                 </div>
                 <input type="email" id="email" name="email" placeholder="Sähköposti" required></input>
                 
-                <button class="g-recaptcha" 
-                data-sitekey="6Lczv50mAAAAAJ3NpMDTwuu_Nu93hZSy0pPMpyuL" 
-                data-callback='onSubmit' 
-                data-action='submit'>Submit</button>
+                <div class="g-recaptcha" data-sitekey="6LcJ4p0mAAAAAO4Nmb6KNyzVoJ8lHLAYQ-ZTpG7q"></div>
+                
+                <input type="submit" value="Tilaa!"></input>
             </form>
         </div>
     </section>
 </body>
 <link type="text/css" rel="stylesheet" href="/styles/style.css">
 <script src="/scripts/script.js"></script>
-<script>
-    function onSubmit(token) {
-      document.getElementById("form-tilaa").submit();
-    }
-</script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </html>
