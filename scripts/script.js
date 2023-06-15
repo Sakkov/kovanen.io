@@ -12,3 +12,11 @@ window.onscroll = function() {
         document.querySelector(".scroll-indicator").style.display = "block";
     }
 };
+
+fetch("/.netlify/functions/getEnvVars")
+    .then((response) => response.json())
+    .then((data) => {
+        // Set recaptcha site key
+        document.querySelector("#recaptcha").setAttribute("data-sitekey", data.RECAPTCHA_SITE_KEY);
+    }
+);
