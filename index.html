@@ -7,6 +7,7 @@
     <link rel="icon" href="images/kovanenio.png" type="image/png">
     <title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>
     <meta name="description" content="kovanen">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
 </head>
 <body>
     <div id="scrollIndicator"></div>
@@ -37,6 +38,7 @@
                 Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden korjausvinkit.
             </p>
             <form 
+                id="form-tilaa"
                 name="contact"
                 action="/pages/kiitos"
                 method="POST" 
@@ -54,12 +56,26 @@
                     esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
                 </div>
                 <input type="email" id="email" name="email" placeholder="Sähköposti" required></input>
-                <div data-netlify-recaptcha="true"></div>
-                <input type="submit" value="Tilaa!">
+                <!-- <div data-netlify-recaptcha="true"></div> -->
+                
+                <input 
+                    type="submit"
+                    class="g-recaptcha" 
+                    data-sitekey="6Lczv50mAAAAAJ3NpMDTwuu_Nu93hZSy0pPMpyuL" 
+                    data-callback='onSubmit' 
+                    data-action='submit'
+                    value="Tilaa!"
+                    >
+                </input>
             </form>
         </div>
     </section>
 </body>
 <link type="text/css" rel="stylesheet" href="/styles/style.css">
 <script src="/scripts/script.js"></script>
+<script>
+    function onSubmit(token) {
+      document.getElementById("form-tilaa").submit();
+    }
+</script>
 </html>
