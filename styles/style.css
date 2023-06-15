@@ -159,3 +159,7 @@ section#tilaa input[type="submit"]:hover {
         font-size: 16px;
     }
 }
+
+.sshh {
+    display: none;
+}

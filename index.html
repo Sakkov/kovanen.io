@@ -37,11 +37,18 @@
                 Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden korjausvinkit.
             </p>
             <form 
-                action="contact" 
+                name="contact"
+                action="/kiitos"
                 method="POST" 
                 data-netlify-recaptcha="true" 
+                data-netlify="true"
                 netlify
             >
+                <p class="sshh">
+                    <label>
+                        Don’t fill this out if you’re human: <input name="bot-field" />
+                    </label>
+                </p>
                 <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required></input>
                 <div class="form-helper-note">
                     esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
