@@ -4,14 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
-    <title>kovanen.io - verkkosivut</title>
+    <link rel="icon" href="images/kovanenio.png" type="image/png">
+    <title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>
     <meta name="description" content="kovanen">
 </head>
 <body>
-    <h1>
-        kovanen.io
-    </h1>
+    <div id="scrollIndicator"></div>
+    <div class="scroll-indicator">
+        <span><img src="images/arrow-down.svg" alt="scroll down" width="50" height="50"></span>
+    </div>
+    
+    <section id="home">
+        <div class="content">
+            <h1>
+                kovanen.io
+            </h1>
+            <p>
+                jotta voisit keskittyä, siihen missä olet parhaimmillasi.
+            </p>
+        </div>
+    </section>
+
+    <section id="tilaa">
+        <div class="content">
+            <h2>
+                Tilaa ilmainen verkkosivujen kartoitus!
+            </h2>
+            <form action="">
+                <input type="text" id="domain" placeholder="verkkotunnuksesi"></input>
+                <div class="form-helper-note">
+                    esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
+                </div>
+                <input type="email" id="email" placeholder="Sähköposti"></input>
+                <input type="submit" value="Tilaa!">
+            </form>
+        </div>
+    </section>
 </body>
+<link type="text/css" rel="stylesheet" href="/styles/style.css">
+<script src="/scripts/script.js"></script>
 </html>
