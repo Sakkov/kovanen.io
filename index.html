@@ -28,14 +28,20 @@
     <section id="tilaa">
         <div class="content">
             <h2>
-                Tilaa ilmainen verkkosivujen kartoitus!
+                Tilaa ilmainen verkkosivujen T<sup>3</sup> kartoitus!
             </h2>
-            <form action="">
-                <input type="text" id="domain" placeholder="verkkotunnuksesi"></input>
+            <h3>
+                <strong>T</strong>ehokkuus, <strong>T</strong>oimivuus ja <strong>T</strong>urvallisuus.
+            </h3>
+            <p>
+                Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden korjausvinkit.
+            </p>
+            <form action="contact" method="POST" netlify>
+                <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi"></input>
                 <div class="form-helper-note">
                     esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
                 </div>
-                <input type="email" id="email" placeholder="Sähköposti"></input>
+                <input type="email" id="email" name="email" placeholder="Sähköposti"></input>
                 <input type="submit" value="Tilaa!">
             </form>
         </div>
