@@ -17,8 +17,9 @@ fetch("/.netlify/functions/getEnvVars")
     .then((response) => response.json())
     .then((data) => {
         // Set recaptcha site key
-        document.querySelector("#recaptcha").setAttribute("data-sitekey", data.RECAPTCHA_SITE_KEY);
-        console.log("Recaptcha site key set.")
+        let recaptchaSiteKey = data.RECAPTCHA_SITE_KEY;
+        document.querySelector("#recaptcha").setAttribute("data-sitekey", recaptchaSiteKey);
+        console.log(recaptchaSiteKey)
     })
     .catch((error) => {
         console.error("Error:", error);
