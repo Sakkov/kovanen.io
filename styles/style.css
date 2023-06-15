@@ -85,6 +85,10 @@ form {
     color: var(--MediumDarkColor1);
     margin: -5px 0 5px 0;
 }
+
+.g-recaptcha {
+    margin: 10px 0;
+}
 /* END GENERAL STYLES */
 
 /* SCROLL INDICATOR */
@@ -163,4 +167,17 @@ section#tilaa input[type="submit"]:hover {
 
 .sshh {
     display: none;
+}
+/* END SMALL DISPLAY STYLES */
+
+/* SUPER SMALL DISPLAY STYLES */
+@media screen and (max-width: 320px) {
+    
+    .g-recaptcha {
+        transform: scale(0.8);
+    }
+
+    .ssshh {
+        display: none;
+    }
 }
