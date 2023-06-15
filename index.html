@@ -36,12 +36,18 @@
             <p>
                 Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden korjausvinkit.
             </p>
-            <form action="contact" method="POST" netlify>
-                <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi"></input>
+            <form 
+                action="contact" 
+                method="POST" 
+                data-netlify-recaptcha="true" 
+                netlify
+            >
+                <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required></input>
                 <div class="form-helper-note">
                     esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
                 </div>
-                <input type="email" id="email" name="email" placeholder="Sähköposti"></input>
+                <input type="email" id="email" name="email" placeholder="Sähköposti" required></input>
+                <div data-netlify-recaptcha="true"></div>
                 <input type="submit" value="Tilaa!">
             </form>
         </div>
