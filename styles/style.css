@@ -258,7 +258,7 @@ footer .content {
     max-width: 2000px;
     text-align: left;
     justify-content: space-evenly;
-    margin: 40px 0;
+    margin: 40px auto;
 }
 
 footer ul {
