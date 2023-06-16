@@ -64,6 +64,19 @@
             </form>
         </div>
     </section>
-</body>
-<link type="text/css" rel="stylesheet" href="/styles/style.css">
+    <script>
+        document.getElementById('form-tilaa').addEventListener('submit', function(evt) {  
+          var response = grecaptcha.getResponse();
+          if(response.length == 0) { 
+            //reCAPTCHA not verified, display error and prevent form submit
+            evt.preventDefault();
+            document.getElementById('recaptchaError').style.display = 'block';
+          } else {
+            //reCAPTCHA verified
+            document.getElementById('recaptchaError').style.display = 'none';
+          }
+        });
+        </script>
+    </body>
+    <link type="text/css" rel="stylesheet" href="/styles/style.css">
 </html>
