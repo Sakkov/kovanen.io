@@ -43,8 +43,10 @@
                 name="contact"
                 method="POST" 
                 data-netlify-recaptcha="true"
+                action="/kiitos"
                 netlify
             >
+                <input type="hidden" name="TTT-kartoitus" value="contact">
                 <p class="sshh">
                     <label>
                         Don’t fill this out if you’re human: <input name="bot-field" />
@@ -58,7 +60,7 @@
                 
                 <div class="g-recaptcha" data-sitekey="6LetmZ4mAAAAAP9hUNrHQNI9xlT60RivVMbxi_V6"></div>
                 
-                <input type="submit" class="g-recaptcha" value="Tilaa!">
+                <input type="submit" class="g-recaptcha" value="Tilaa!" name="submit">
             </form>
         </div>
     </section>
