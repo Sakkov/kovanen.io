@@ -245,6 +245,7 @@ section#it-tuki .text {
     height: max-content;
 }
 
+/* FOOTER STYLES */
 footer {
     background-color: var(--MediumDarkColor1);
     color: var(--LightColor1);
@@ -253,10 +254,11 @@ footer {
 
 footer .content {
     display: flex;
+    width: 100%;
     max-width: 2000px;
     text-align: left;
     justify-content: space-evenly;
-    margin: 40px;
+    margin: 40px 0;
 }
 
 footer ul {
@@ -281,6 +283,7 @@ footer a:visited {
     background-color: var(--DarkColor1);
     padding: 15px;
 }
+/* END FOOTER STYLES */
 
 .only-large {
     display: block;
