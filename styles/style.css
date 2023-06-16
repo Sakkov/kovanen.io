@@ -89,6 +89,18 @@ form {
 .g-recaptcha {
     margin: 10px 0;
 }
+
+@keyframes wiggle {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+.wiggle {
+    animation: wiggle 0.2s 3; /* Play the wiggle animation for 0.5 seconds, 3 times */
+}
 /* END GENERAL STYLES */
 
 /* SCROLL INDICATOR */

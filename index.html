@@ -1,82 +1,88 @@
 <!DOCTYPE html>
 <html lang="fi">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/kovanenio.png" type="image/png">
-    <title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>
-    <meta name="description" content="kovanen">
-    <script src="/scripts/script.js"></script>
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-</head>
-<body>
-    <div id="scrollIndicator"></div>
-    <div class="scroll-indicator">
-        <span><img src="images/arrow-down.svg" alt="scroll down" width="50" height="50"></span>
-    </div>
-    
-    <section id="home">
-        <div class="content">
-            <h1>
-                kovanen.io
-            </h1>
-            <p>
-                jotta voisit keskittyä, siihen missä olet parhaimmillasi.
-            </p>
-        </div>
-    </section>
 
-    <section id="tilaa">
-        <div class="content">
-            <h2>
-                Tilaa ilmainen verkkosivujen T<sup>3</sup> kartoitus!
-            </h2>
-            <h3>
-                <strong>T</strong>ehokkuus, <strong>T</strong>oimivuus ja <strong>T</strong>urvallisuus.
-            </h3>
-            <p>
-                Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden korjausvinkit.
-            </p>
-            <form 
-                id="form-tilaa"
-                name="contact"
-                method="POST" 
-                data-netlify-recaptcha="true"
-                action="/kiitos"
-                netlify
-            >
-                <input type="hidden" name="TTT-kartoitus" value="contact">
-                <p class="sshh">
-                    <label>
-                        Don’t fill this out if you’re human: <input name="bot-field" />
-                    </label>
-                </p>
-                <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required></input>
-                <div class="form-helper-note">
-                    esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
-                </div>
-                <input type="email" id="email" name="email" placeholder="Sähköposti" required></input>
-                
-                <div class="g-recaptcha" data-sitekey="6LetmZ4mAAAAAP9hUNrHQNI9xlT60RivVMbxi_V6"></div>
-                
-                <input type="submit" class="g-recaptcha" value="Tilaa!" name="submit">
-            </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="images/kovanenio.png" type="image/png">
+        <title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>
+        <meta name="description" content="kovanen">
+        <script src="/scripts/script.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    </head>
+
+    <body>
+        <div id="scrollIndicator"></div>
+        <div class="scroll-indicator">
+            <span><img src="images/arrow-down.svg" alt="scroll down" width="50" height="50"></span>
         </div>
-    </section>
-    <script>
-        document.getElementById('form-tilaa').addEventListener('submit', function(evt) {  
-          var response = grecaptcha.getResponse();
-          if(response.length == 0) { 
-            //reCAPTCHA not verified, display error and prevent form submit
-            evt.preventDefault();
-            document.getElementById('recaptchaError').style.display = 'block';
-          } else {
-            //reCAPTCHA verified
-            document.getElementById('recaptchaError').style.display = 'none';
-          }
-        });
+
+        <section id="home">
+            <div class="content">
+                <h1>
+                    kovanen.io
+                </h1>
+                <p>
+                    jotta voisit keskittyä, siihen missä olet parhaimmillasi.
+                </p>
+            </div>
+        </section>
+
+        <section id="tilaa">
+            <div class="content">
+                <h2>
+                    Tilaa ilmainen verkkosivujen T<sup>3</sup> kartoitus!
+                </h2>
+                <h3>
+                    <strong>T</strong>ehokkuus, <strong>T</strong>oimivuus ja <strong>T</strong>urvallisuus.
+                </h3>
+                <p>
+                    Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden korjausvinkit.
+                </p>
+                <form id="form-tilaa" name="contact" method="POST" data-netlify-recaptcha="true" action="/kiitos"
+                    netlify>
+                    <input type="hidden" name="TTT-kartoitus" value="contact">
+                    <p class="sshh">
+                        <label>
+                            Don’t fill this out if you’re human: <input name="bot-field" />
+                        </label>
+                    </p>
+                    <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required></input>
+                    <div class="form-helper-note">
+                        esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
+                    </div>
+                    <input type="email" id="email" name="email" placeholder="Sähköposti" required></input>
+
+                    <div class="g-recaptcha" data-sitekey="6LetmZ4mAAAAAP9hUNrHQNI9xlT60RivVMbxi_V6"></div>
+
+                    <div id="recaptchaError" style="color: red; display: none;">Please complete the reCAPTCHA</div>
+
+                    <input type="submit" class="g-recaptcha" value="Tilaa!" name="submit">
+                </form>
+            </div>
+        </section>
+        <script>
+            document.getElementById('form-tilaa').addEventListener('submit', function(evt) {  
+              var response = grecaptcha.getResponse();
+              var errorDiv = document.getElementById('recaptchaError');
+              
+              if(response.length == 0) { 
+                //reCAPTCHA not verified, display error and prevent form submit
+                evt.preventDefault();
+                errorDiv.style.display = 'block';
+            
+                // Remove the wiggle class and then re-add it to trigger the animation
+                errorDiv.classList.remove('wiggle');
+                void errorDiv.offsetWidth; // Trigger reflow to restart the animation
+                errorDiv.classList.add('wiggle');
+              } else {
+                //reCAPTCHA verified
+                errorDiv.style.display = 'none';
+              }
+            });
         </script>
     </body>
     <link type="text/css" rel="stylesheet" href="/styles/style.css">
+
 </html>
