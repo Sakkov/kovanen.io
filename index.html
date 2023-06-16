@@ -10,6 +10,39 @@
         <meta name="description" content="kovanen">
         <script src="/scripts/script.js"></script>
         <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <!-- Load critically essential -->
+        <style>
+            section#home {
+                text-align: center;
+            }
+
+            body {
+                font-family: 'Poppins', sans-serif;
+                font-size: 20px;
+                line-height: 1.5;
+                color: var(--MediumDarkColor1);
+                background: var(--LightColor1);
+            }
+            
+            section {
+                position: relative;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            .scroll-indicator {
+                position: fixed;
+                bottom: 10px;
+                left: 50%;
+                transform: translateX(-50%);
+                font-size: 2em;
+                z-index: 100;
+            }
+        </style>
     </head>
 
     <body>
@@ -135,6 +168,10 @@
                         <img src="/images/screenshots/7_q80_320x180.webp" alt="random bible verse" width="300" height="180">
                         <!-- Random Bible -->
                     </a>
+                    <a href="https://wiki.kovanen.io">
+                        <img src="/images/screenshots/8_q80_320x180.webp" alt="suomi wiki" width="300" height="180">
+                        <!-- wiki.Kovanen.io -->
+                    </a>
                 </div>
             </div>
         </section>
@@ -164,6 +201,7 @@
                     kovanen.io
                 </h2>
             </div>
+            <hr>
             <div class="content">
                 <div class="text">
                     <h3>
