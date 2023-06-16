@@ -101,6 +101,14 @@ form {
 .wiggle {
     animation: wiggle 0.3s 3; /* Play the wiggle animation for 0.5 seconds, 3 times */
 }
+
+a img {
+    border: none;
+}
+
+a img:hover {
+    opacity: 0.8;
+}
 /* END GENERAL STYLES */
 
 /* SCROLL INDICATOR */
@@ -172,7 +180,7 @@ section#tilaa input[type="submit"]:hover {
 
 section#peukku {
     background-color: var(--MediumDarkColor1);
-    color: var(--HighLightColor3);
+    color: var(--DarkColor1);
     line-height: normal;
 }
 
@@ -202,7 +210,7 @@ section#peukku .text-container {
 
 section#peukku .text {
     z-index: 2;
-    background-color: var(--MediumLightColor1);
+    background-color: var(--LightColor1);
     padding: 20px;
     border-radius: 24px;
     width: max-content;
@@ -221,6 +229,54 @@ section#peukku .text h2 {
     display: none;
 }
 
+section#verkkosivuja {
+    background-color: var(--MediumLightColor1);
+}
+
+section#verkkosivuja a {
+    text-decoration: none;
+}
+
+section#verkkosivuja img {
+    border-radius: 24px;
+}
+
+section#it-tuki {
+    background-color: var(--LightColor1);
+    color: var(--LightColor1);
+}
+
+section#it-tuki .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+}
+
+section#it-tuki img {
+    height: auto;
+    border-radius: 24px;
+    max-width: 100vh;
+    transform: scale(1.4);
+}
+
+section#it-tuki .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+section#it-tuki .text {
+    z-index: 2;
+    background-color: var(--MediumDarkColor1);
+    padding: 20px;
+    border-radius: 24px;
+    width: max-content;
+    height: max-content;
+}
+
 /* MEDIUM DISPLAY STYLES */
 @media screen and (max-width: 960px) {
     body {
@@ -228,7 +284,7 @@ section#peukku .text h2 {
     }
 
     section#peukku .content {
-        grid-template-columns: 1fr;
+        display: block;
     }
 
     section#peukku img {
@@ -246,6 +302,19 @@ section#peukku .text h2 {
         width: 100%;
     }
 
+    section#it-tuki .img-container {
+        margin: 0;
+    }
+
+    section#it-tuki img {
+        transform: scale(1);
+        max-width: 100%;
+    }
+
+    section#it-tuki .text {
+        max-width: 100%;
+    }
+
     .only-large {
         display: none;
     }
@@ -257,8 +326,25 @@ section#peukku .text h2 {
 
 /* SMALL DISPLAY STYLES */
 @media screen and (max-width: 768px) {
-    body {
-        font-size: 16px;
+    * {
+        word-wrap: break-word;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
@@ -269,6 +355,18 @@ section#peukku .text h2 {
 
 /* SUPER SMALL DISPLAY STYLES */
 @media screen and (max-width: 320px) {
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
     
     .g-recaptcha {
         transform: scale(0.8);
