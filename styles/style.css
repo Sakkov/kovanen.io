@@ -99,7 +99,7 @@ form {
 }
 
 .wiggle {
-    animation: wiggle 0.2s 3; /* Play the wiggle animation for 0.5 seconds, 3 times */
+    animation: wiggle 0.3s 3; /* Play the wiggle animation for 0.5 seconds, 3 times */
 }
 /* END GENERAL STYLES */
 
@@ -168,6 +168,91 @@ section#tilaa input[type="submit"] {
 
 section#tilaa input[type="submit"]:hover {
     background-color: var(--HighLightColor3);
+}
+
+section#peukku {
+    background-color: var(--MediumDarkColor1);
+    color: var(--HighLightColor3);
+    line-height: normal;
+}
+
+section#peukku .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 2000px;
+}
+
+section#peukku .img-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+section#peukku img {
+    width: 140%;
+    transform: translateX(-40%);
+    border-radius: 24px;
+}
+
+section#peukku .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+section#peukku .text {
+    z-index: 2;
+    background-color: var(--MediumLightColor1);
+    padding: 20px;
+    border-radius: 24px;
+    width: max-content;
+    height: max-content;
+}
+
+section#peukku .text h2 {
+    margin: 20px 0;
+}
+
+.only-large {
+    display: block;
+}
+
+.medium-and-smaller {
+    display: none;
+}
+
+/* MEDIUM DISPLAY STYLES */
+@media screen and (max-width: 960px) {
+    body {
+        font-size: 18px;
+    }
+
+    section#peukku .content {
+        grid-template-columns: 1fr;
+    }
+
+    section#peukku img {
+        width: 100%;
+        max-width: 360px;
+        transform: translateX(0);
+        margin: 20px auto;
+    }
+
+    section#peukku .text-container {
+        justify-content: center;
+    }
+
+    section#peukku .text {
+        width: 100%;
+    }
+
+    .only-large {
+        display: none;
+    }
+
+    .medium-and-smaller {
+        display: block;
+    }
 }
 
 /* SMALL DISPLAY STYLES */
