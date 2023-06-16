@@ -221,14 +221,6 @@ section#peukku .text h2 {
     margin: 20px 0;
 }
 
-.only-large {
-    display: block;
-}
-
-.medium-and-smaller {
-    display: none;
-}
-
 section#verkkosivuja {
     background-color: var(--MediumLightColor1);
 }
@@ -275,6 +267,51 @@ section#it-tuki .text {
     border-radius: 24px;
     width: max-content;
     height: max-content;
+}
+
+footer {
+    background-color: var(--MediumDarkColor1);
+    color: var(--LightColor1);
+    text-align: left;
+}
+
+footer .content {
+    display: flex;
+    max-width: 2000px;
+    text-align: left;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: var(--LightColor1);
+}
+
+footer a:hover {
+    color: var(--MediumLightColor1);
+}
+
+footer a:visited {
+    color: var(--LightColor1);
+}
+
+.footer-cc {
+    text-align: center;
+    background-color: var(--DarkColor1);
+    padding: 15px;
+}
+
+.only-large {
+    display: block;
+}
+
+.medium-and-smaller {
+    display: none;
 }
 
 /* MEDIUM DISPLAY STYLES */
@@ -345,6 +382,17 @@ section#it-tuki .text {
     img {
         max-width: 100%;
         height: auto;
+    }
+
+    footer .content {
+        flex-direction: column;
+        width: max-content;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    footer .content .text {
+        margin: 20px 0;
     }
 }
 
