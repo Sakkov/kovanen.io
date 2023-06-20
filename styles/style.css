@@ -266,6 +266,10 @@ footer ul {
     padding: 0;
 }
 
+footer li {
+    margin: 10px 0;
+}
+
 footer a {
     color: var(--LightColor1);
 }
