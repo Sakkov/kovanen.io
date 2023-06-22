@@ -124,7 +124,7 @@
         Please complete the reCAPTCHA
       </div>
 
-      <input type="submit" class="g-recaptcha" value="Tilaa!" name="submit" />
+      <input type="submit" value="Tilaa!" name="submit" />
     </form>
   </div>
 </section>

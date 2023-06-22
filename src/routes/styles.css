@@ -1,10 +1,12 @@
 :root {
     --LightColor1: #ffffff;
     --MediumLightColor1: #d2dbf1;
-    --MediumColor1: #8a8e99;
+    --MediumColor1: #30374d;
     --MediumDarkColor1: #272930;
     --DarkColor1: #000000;
     --HighLightColor1: #CC3363;
+    --HighLightColor1dark: #A62C4F;
+    --HighLightColor1darker: #681D31;
     --HighLightColor2: #43744a;
     --HighLightColor3: #0E34A0;
 }
@@ -20,7 +22,7 @@ body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 20px;
 	line-height: 1.5;
-	color: var(--MediumDarkColor1);
+	color: var(--DarkColor1);
 	background: var(--LightColor1);
 }
 
@@ -64,15 +66,15 @@ hr {
 }
 
 a {
-    color: var(--HighLightColor1);
+    color: var(--HighLightColor1dark);
 }
 
 a:hover {
-    color: var(--HighLightColor3);
+    color: var(--HighLightColor1);
 }
 
 a:visited {
-    color: var(--HighLightColor2);
+    color: var(--HighLightColor1darker);
 }
 
 strong {
@@ -89,7 +91,7 @@ form {
 }
 
 .form-helper-note {
-    font-size: 0.8em;
+    font-size: 1em;
     color: var(--MediumDarkColor1);
     margin: -5px 0 5px 0;
 }
@@ -144,6 +146,7 @@ a img:hover {
 
 section#tilaa {
     background-color: var(--MediumLightColor1);
+    color: var(--DarkColor1);
 }
 
 section#tilaa input {
