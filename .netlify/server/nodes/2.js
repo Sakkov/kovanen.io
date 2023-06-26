@@ -4,6 +4,6 @@ export const index = 2;
 export const component = async () => (await import('../entries/pages/_page.svelte.js')).default;
 export { universal };
 export const universal_id = "src/routes/+page.js";
-export const imports = ["_app/immutable/nodes/2.11da1074.js","_app/immutable/chunks/index.ba88bf04.js"];
+export const imports = ["_app/immutable/nodes/2.9c2fad1b.js","_app/immutable/chunks/index.716684d7.js"];
 export const stylesheets = ["_app/immutable/assets/2.0dcc93b1.css"];
 export const fonts = [];
