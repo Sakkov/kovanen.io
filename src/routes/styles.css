@@ -4,11 +4,17 @@
     --MediumColor1: #30374d;
     --MediumDarkColor1: #272930;
     --DarkColor1: #000000;
+    --HighLightColor1light: #f1b9cb;
     --HighLightColor1: #CC3363;
     --HighLightColor1dark: #A62C4F;
     --HighLightColor1darker: #681D31;
-    --HighLightColor2: #43744a;
-    --HighLightColor3: #0E34A0;
+    --HighLightColor2light: #b0e8b0;
+    --HighLightColor2: #58c067;
+    --HighLightColor2dark: #43744a;
+    --HighLightColor2darker: #2e4f33;
+    --HighLightColor3light: #9dc6f8;
+    --HighLightColor3: #446ee4;
+    --HighLightColor3dark: #0E34A0;
 }
 
 /* GENERAL STYLES */
@@ -144,134 +150,20 @@ a img:hover {
 }
 /* END SCROLL INDICATOR */
 
-section#tilaa {
-    background-color: var(--MediumLightColor1);
-    color: var(--DarkColor1);
-}
-
-section#tilaa input {
-    width: 700px;
-    max-width: 100%;
-    padding: 10px;
-    border-radius: 24px;
-    font-size: 1.2em;
-    border: none;
-    text-align: center;
-    margin: 5px 0;
-}
-
-section#tilaa input:focus {
-    outline: var(--HighLightColor3) auto 1px;
-}
-
-section#tilaa input[type="submit"] {
-    background-color: var(--HighLightColor1);
-    color: var(--LightColor1);
-    font-weight: bold;
-    cursor: pointer;
-    width: auto;
-}
-
-section#tilaa input[type="submit"]:hover {
-    background-color: var(--HighLightColor3);
-}
-
-section#peukku {
-    background-color: var(--MediumDarkColor1);
-    color: var(--DarkColor1);
-    line-height: normal;
-}
-
-section#peukku .content {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    max-width: 2000px;
-}
-
-section#peukku .img-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-
-section#peukku img {
-    width: 140%;
-    transform: translateX(-40%);
-    border-radius: 24px;
-}
-
-section#peukku .text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-section#peukku .text {
-    z-index: 2;
-    background-color: var(--LightColor1);
-    padding: 20px;
-    border-radius: 24px;
-    width: max-content;
-    height: max-content;
-}
-
-section#peukku .text h2 {
-    margin: 20px 0;
-}
-
-section#verkkosivuja {
-    background-color: var(--MediumLightColor1);
-}
-
-section#verkkosivuja a {
-    text-decoration: none;
-}
-
-section#verkkosivuja img {
-    border-radius: 24px;
-}
-
-section#it-tuki {
-    background-color: var(--LightColor1);
-    color: var(--LightColor1);
-}
-
-section#it-tuki .img-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 100px 0;
-}
-
-section#it-tuki img {
-    height: auto;
-    border-radius: 24px;
-    max-width: 100vh;
-    transform: scale(1.4);
-}
-
-section#it-tuki .text-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-width: 600px;
-    margin: auto;
-}
-
-section#it-tuki .text {
-    z-index: 2;
-    background-color: var(--MediumDarkColor1);
-    padding: 20px;
-    border-radius: 24px;
-    width: max-content;
-    height: max-content;
-}
 
 .only-large {
     display: block;
 }
 
 .medium-and-smaller {
+    display: none;
+}
+
+.notLess480 {
+    display: block;
+}
+
+.onLess480 {
     display: none;
 }
 
@@ -373,6 +265,18 @@ section#it-tuki .text {
     display: none;
 }
 /* END SMALL DISPLAY STYLES */
+
+/* VERY SMALL DISPLAY STYLES */
+@media screen and (max-width: 480px) {
+    .notLess480 {
+        display: none;
+    }
+
+    .onLess480 {
+        display: block;
+    }
+}
+/* END VERY SMALL DISPLAY STYLES */
 
 /* SUPER SMALL DISPLAY STYLES */
 @media screen and (max-width: 320px) {
