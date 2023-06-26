@@ -13,7 +13,7 @@
       // @ts-ignore
       body: new URLSearchParams(Array.from(data)).toString(),
     })
-      .then(() => console.log("Form successfully submitted"))
+      .then(() => location.href = "/kiitos")
       .catch((error) => alert(error));
   }
 </script>
