@@ -1,12 +1,10 @@
 <script>
   // import scripts
-  import { onMount } from "svelte";
 
   // import elements
   import Form from "./TTTform.svelte";
 
   // import images
-  import arrowDown from "$lib/images/arrow-down.svg";
   import peukku from "$lib/images/mainoskuva12_4_2022.webp";
   import peukku360 from "$lib/images/mainoskuva12_4_2022_w360.webp";
   import verkkosivu1 from "$lib/images/screenshots/1_q80_320x180.webp";
@@ -19,42 +17,6 @@
   import verkkosivu8 from "$lib/images/screenshots/8_q80_320x180.webp";
   import itTuki from "$lib/images/it-tuki.webp";
   import itTuki360 from "$lib/images/it-tuki_w360.webp";
-
-  onMount(() => {
-    window.onscroll = function () {
-      // Scroll progress indicator
-      var winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      var height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-
-      var scrollIndicator = document.getElementById("scrollIndicator");
-
-      if (scrollIndicator instanceof HTMLElement) {
-        scrollIndicator.style.width = scrolled + "%";
-      }
-
-      // Scroll down indicator
-      var scrollIndicatorQuery = document.querySelector(".scroll-indicator");
-
-      if (
-        document.body.scrollTop > 100 ||
-        document.documentElement.scrollTop > 100
-      ) {
-        if (scrollIndicatorQuery instanceof HTMLElement) {
-          scrollIndicatorQuery.style.display = "none";
-        }
-      } else {
-        if (scrollIndicatorQuery instanceof HTMLElement) {
-          scrollIndicatorQuery.style.display = "block";
-        }
-      }
-    };
-  });
-
-  
 </script>
 
 <svelte:head>
@@ -62,11 +24,6 @@
   <title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>
   <meta name="description" content="kovanen" />
 </svelte:head>
-
-<div id="scrollIndicator" />
-<div class="scroll-indicator">
-  <span><img src={arrowDown} alt="scroll down" width="50" height="50" /></span>
-</div>
 
 <section id="home">
   <div class="content">
@@ -220,12 +177,99 @@
     text-align: center;
   }
 
-  .scroll-indicator {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 2em;
-    z-index: 100;
+  section#tilaa {
+    background-color: var(--MediumLightColor1);
+    color: var(--DarkColor1);
+  }
+
+  section#peukku {
+    background-color: var(--MediumDarkColor1);
+    color: var(--DarkColor1);
+    line-height: normal;
+  }
+
+  section#peukku .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 2000px;
+  }
+
+  section#peukku .img-container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  section#peukku img {
+    width: 140%;
+    transform: translateX(-40%);
+    border-radius: 24px;
+  }
+
+  section#peukku .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section#peukku .text {
+    z-index: 2;
+    background-color: var(--LightColor1);
+    padding: 20px;
+    border-radius: 24px;
+    width: max-content;
+    height: max-content;
+  }
+
+  section#peukku .text h2 {
+    margin: 20px 0;
+  }
+
+  section#verkkosivuja {
+    background-color: var(--MediumLightColor1);
+  }
+
+  section#verkkosivuja a {
+    text-decoration: none;
+  }
+
+  section#verkkosivuja img {
+    border-radius: 24px;
+  }
+
+  section#it-tuki {
+    background-color: var(--LightColor1);
+    color: var(--LightColor1);
+  }
+
+  section#it-tuki .img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px 0;
+  }
+
+  section#it-tuki img {
+    height: auto;
+    border-radius: 24px;
+    max-width: 100vh;
+    transform: scale(1.4);
+  }
+
+  section#it-tuki .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+  }
+
+  section#it-tuki .text {
+    z-index: 2;
+    background-color: var(--MediumDarkColor1);
+    padding: 20px;
+    border-radius: 24px;
+    width: max-content;
+    height: max-content;
   }
 </style>

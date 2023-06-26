@@ -95,9 +95,13 @@
     </div>
   </div>
   <div class="footer-cc">
-    © kovanen.io 2023 Kaikki oikeudet pidätetään. <a href="/tietoturvaseloste"
-      >Tietoturvaseloste</a
-    >
+    <span>
+      © kovanen.io 2023 
+    </span>
+    |
+    <a href="/tietoturvaseloste">
+      Tietoturvaseloste
+    </a>
   </div>
 </footer>
 
@@ -128,20 +132,18 @@
 
   footer a {
     color: var(--LightColor1);
+    text-decoration: none;
   }
 
   footer a:hover {
     color: var(--MediumLightColor1);
   }
 
-  footer a:visited {
-    color: var(--LightColor1);
-  }
-
   .footer-cc {
     text-align: center;
     background-color: var(--DarkColor1);
     padding: 15px;
+    font-size: 0.9em;
   }
 
   /* SMALL DISPLAY STYLES */

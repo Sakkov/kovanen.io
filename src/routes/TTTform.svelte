@@ -48,4 +48,31 @@
 </form>
 
 <style>
+
+  input {
+    width: 700px;
+    max-width: 100%;
+    padding: 10px;
+    border-radius: 24px;
+    font-size: 1.2em;
+    border: none;
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  input:focus {
+    outline: var(--HighLightColor3) auto 1px;
+  }
+
+  input[type="submit"] {
+    background-color: var(--HighLightColor1);
+    color: var(--LightColor1);
+    font-weight: bold;
+    cursor: pointer;
+    width: auto;
+  }
+
+  input[type="submit"]:hover {
+    background-color: var(--HighLightColor3);
+  }
 </style>
