@@ -1,4 +1,15 @@
-import { c as create_ssr_component, d as add_attribute } from "../../chunks/index.js";
+import { c as create_ssr_component, d as add_attribute, v as validate_component } from "../../chunks/index.js";
+const TTTform = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  return `<form id="form-tilaa" name="contact" method="POST" data-netlify="true"><input type="hidden" name="TTT-kartoitus" value="contact">
+  <p class="sshh"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
+  <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required>
+  <div class="form-helper-note">esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a></div>
+  <input type="email" id="email" name="email" placeholder="Sähköposti" required>
+  
+
+  <input type="submit" value="Tilaa!" name="submit">
+</form>`;
+});
 const arrowDown = "/_app/immutable/assets/arrow-down.c1ecb22a.svg";
 const peukku = "/_app/immutable/assets/mainoskuva12_4_2022.7c232bd3.webp";
 const peukku360 = "/_app/immutable/assets/mainoskuva12_4_2022_w360.c7073450.webp";
@@ -35,18 +46,7 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <p>Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden
       korjausvinkit.
     </p>
-    <form id="form-tilaa" name="contact" method="POST" data-netlify-recaptcha="true" action="/kiitos" netlify><input type="hidden" name="TTT-kartoitus" value="contact">
-      <p class="sshh"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
-      <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required>
-      <div class="form-helper-note">esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a></div>
-      <input type="email" id="email" name="email" placeholder="Sähköposti" required>
-
-      <div class="g-recaptcha" data-sitekey="6LetmZ4mAAAAAP9hUNrHQNI9xlT60RivVMbxi_V6"></div>
-
-      <div id="recaptchaError" style="color: red; display: none;">Please complete the reCAPTCHA
-      </div>
-
-      <input type="submit" class="g-recaptcha" value="Tilaa!" name="submit"></form></div></section>
+    ${validate_component(TTTform, "Form").$$render($$result, {}, {}, {})}</div></section>
 
 <section id="peukku"><div class="content"><div class="text-container"><div class="text"><h3>Missä sinä tarvitsisit apua?</h3>
         <h2>IT-tuki</h2>

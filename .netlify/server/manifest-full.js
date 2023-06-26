@@ -4,7 +4,7 @@ export const manifest = {
 	assets: new Set(["favicon.png","robots.txt"]),
 	mimeTypes: {".png":"image/png",".txt":"text/plain"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.570b5b4a.js","app":"_app/immutable/entry/app.6b6c300a.js","imports":["_app/immutable/entry/start.570b5b4a.js","_app/immutable/chunks/index.ba88bf04.js","_app/immutable/chunks/singletons.e37e87ff.js","_app/immutable/entry/app.6b6c300a.js","_app/immutable/chunks/index.ba88bf04.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.0ad36f1a.js","app":"_app/immutable/entry/app.66a1516d.js","imports":["_app/immutable/entry/start.0ad36f1a.js","_app/immutable/chunks/index.716684d7.js","_app/immutable/chunks/singletons.cbf3e318.js","_app/immutable/entry/app.66a1516d.js","_app/immutable/chunks/index.716684d7.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			() => import('./nodes/0.js'),
 			() => import('./nodes/1.js'),
@@ -24,7 +24,8 @@ export const manifest = {
 			() => import('./nodes/15.js'),
 			() => import('./nodes/16.js'),
 			() => import('./nodes/17.js'),
-			() => import('./nodes/18.js')
+			() => import('./nodes/18.js'),
+			() => import('./nodes/19.js')
 		],
 		routes: [
 			{
@@ -77,73 +78,80 @@ export const manifest = {
 				endpoint: null
 			},
 			{
+				id: "/kiitos",
+				pattern: /^\/kiitos\/?$/,
+				params: [],
+				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				endpoint: null
+			},
+			{
 				id: "/konsultointi",
 				pattern: /^\/konsultointi\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 9 },
+				page: { layouts: [0,], errors: [1,], leaf: 10 },
 				endpoint: null
 			},
 			{
 				id: "/kyberturvallisuus",
 				pattern: /^\/kyberturvallisuus\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 10 },
+				page: { layouts: [0,], errors: [1,], leaf: 11 },
 				endpoint: null
 			},
 			{
 				id: "/kyberturvallisuus/yksityisille",
 				pattern: /^\/kyberturvallisuus\/yksityisille\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 11 },
+				page: { layouts: [0,], errors: [1,], leaf: 12 },
 				endpoint: null
 			},
 			{
 				id: "/kyberturvallisuus/yrityksille",
 				pattern: /^\/kyberturvallisuus\/yrityksille\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 12 },
+				page: { layouts: [0,], errors: [1,], leaf: 13 },
 				endpoint: null
 			},
 			{
 				id: "/mainostus",
 				pattern: /^\/mainostus\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 13 },
+				page: { layouts: [0,], errors: [1,], leaf: 14 },
 				endpoint: null
 			},
 			{
 				id: "/meista",
 				pattern: /^\/meista\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 14 },
+				page: { layouts: [0,], errors: [1,], leaf: 15 },
 				endpoint: null
 			},
 			{
 				id: "/tietoturvaseloste",
 				pattern: /^\/tietoturvaseloste\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 15 },
+				page: { layouts: [0,], errors: [1,], leaf: 16 },
 				endpoint: null
 			},
 			{
 				id: "/tiimi",
 				pattern: /^\/tiimi\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 16 },
+				page: { layouts: [0,], errors: [1,], leaf: 17 },
 				endpoint: null
 			},
 			{
 				id: "/urat",
 				pattern: /^\/urat\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 17 },
+				page: { layouts: [0,], errors: [1,], leaf: 18 },
 				endpoint: null
 			},
 			{
 				id: "/verkkosivut",
 				pattern: /^\/verkkosivut\/?$/,
 				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 18 },
+				page: { layouts: [0,], errors: [1,], leaf: 19 },
 				endpoint: null
 			}
 		],
