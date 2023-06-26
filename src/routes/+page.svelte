@@ -1,5 +1,11 @@
 <script>
+  // import scripts
   import { onMount } from "svelte";
+
+  // import elements
+  import Form from "./TTTform.svelte";
+
+  // import images
   import arrowDown from "$lib/images/arrow-down.svg";
   import peukku from "$lib/images/mainoskuva12_4_2022.webp";
   import peukku360 from "$lib/images/mainoskuva12_4_2022_w360.webp";
@@ -13,7 +19,6 @@
   import verkkosivu8 from "$lib/images/screenshots/8_q80_320x180.webp";
   import itTuki from "$lib/images/it-tuki.webp";
   import itTuki360 from "$lib/images/it-tuki_w360.webp";
-
 
   onMount(() => {
     window.onscroll = function () {
@@ -49,7 +54,7 @@
     };
   });
 
-
+  
 </script>
 
 <svelte:head>
@@ -83,49 +88,7 @@
       Saat raportin, jossa on listattu mahdolliset ongelmat ja niiden
       korjausvinkit.
     </p>
-    <form
-      id="form-tilaa"
-      name="contact"
-      method="POST"
-      data-netlify-recaptcha="true"
-      action="/kiitos"
-      netlify
-    >
-      <input type="hidden" name="TTT-kartoitus" value="contact" />
-      <p class="sshh">
-        <label>
-          Don’t fill this out if you’re human: <input name="bot-field" />
-        </label>
-      </p>
-      <input
-        type="text"
-        id="domain"
-        name="domain"
-        placeholder="verkkotunnuksesi"
-        required
-      />
-      <div class="form-helper-note">
-        esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a>
-      </div>
-      <input
-        type="email"
-        id="email"
-        name="email"
-        placeholder="Sähköposti"
-        required
-      />
-
-      <div
-        class="g-recaptcha"
-        data-sitekey="6LetmZ4mAAAAAP9hUNrHQNI9xlT60RivVMbxi_V6"
-      />
-
-      <div id="recaptchaError" style="color: red; display: none;">
-        Please complete the reCAPTCHA
-      </div>
-
-      <input type="submit" value="Tilaa!" name="submit" />
-    </form>
+    <Form />
   </div>
 </section>
 
@@ -147,11 +110,7 @@
       </div>
     </div>
     <div class="img-container">
-      <img
-        src={peukku}
-        alt="Iloinen it-tuki"
-        class="only-large"
-      />
+      <img src={peukku} alt="Iloinen it-tuki" class="only-large" />
       <img
         src={peukku360}
         alt="Iloinen web kehitys"
@@ -175,21 +134,11 @@
         <!-- Saku Kovanen Portfolio sivu -->
       </a>
       <a href="https://fiksukuljetus.com">
-        <img
-          src={verkkosivu2}
-          alt="Muutto Tampere"
-          width="300"
-          height="180"
-        />
+        <img src={verkkosivu2} alt="Muutto Tampere" width="300" height="180" />
         <!-- Fiksukuljetus -->
       </a>
       <a href="https://haikangrilli.fi">
-        <img
-          src={verkkosivu3}
-          alt="Grilli Pirkkala"
-          width="300"
-          height="180"
-        />
+        <img src={verkkosivu3} alt="Grilli Pirkkala" width="300" height="180" />
         <!-- Haikan Grilli -->
       </a>
       <a href="https://kauvanto.fi">
@@ -229,12 +178,7 @@
         <!-- Random Bible -->
       </a>
       <a href="https://wiki.kovanen.io">
-        <img
-          src={verkkosivu8}
-          alt="suomi wiki"
-          width="300"
-          height="180"
-        />
+        <img src={verkkosivu8} alt="suomi wiki" width="300" height="180" />
         <!-- wiki.Kovanen.io -->
       </a>
     </div>
