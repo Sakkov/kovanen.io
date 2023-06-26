@@ -1,18 +1,18 @@
 <script>
   // @ts-ignore
-    async function handleSubmit(event) {
-        const form = event.target;
-        const data = new FormData(form);
+  async function handleSubmit(event) {
+    const form = event.target;
+    const data = new FormData(form);
 
-        await fetch('/',{
-            method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            // @ts-ignore
-            body: new URLSearchParams(data).toString()
-        })
-        .then(() => location.href = '/kiitos')
-        .catch((error) => alert(error));
-    }
+    await fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // @ts-ignore
+      body: new URLSearchParams(data).toString(),
+    })
+      .then(() => console.log("Form successfully submitted"))
+      .catch((error) => alert(error));
+  }
 </script>
 
 <form
