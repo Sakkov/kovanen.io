@@ -1,6 +1,6 @@
 import { c as create_ssr_component, d as add_attribute, v as validate_component } from "../../chunks/index.js";
 const TTTform = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<form id="form-tilaa" name="contact" method="POST" action="/kiitos" data-netlify="true"><input type="hidden" name="TTT-kartoitus" value="contact">
+  return `<form id="form-tilaa" name="contact" method="POST" data-netlify="true"><input type="hidden" name="TTT-kartoitus" value="contact">
   <p class="sshh"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
   <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required>
   <div class="form-helper-note">esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a></div>

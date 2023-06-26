@@ -19,7 +19,6 @@
   id="form-tilaa"
   name="contact"
   method="POST"
-  action="/kiitos"
   data-netlify="true"
   on:submit|preventDefault={handleSubmit}
 >
