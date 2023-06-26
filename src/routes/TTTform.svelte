@@ -1,14 +1,17 @@
 <script>
   // @ts-ignore
+  let form;
+  // @ts-ignore
   async function handleSubmit(event) {
-    const form = event.target;
+    event.preventDefault();
+    // @ts-ignore
     const data = new FormData(form);
 
     await fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       // @ts-ignore
-      body: new URLSearchParams(data).toString(),
+      body: new URLSearchParams(Array.from(data)).toString(),
     })
       .then(() => console.log("Form successfully submitted"))
       .catch((error) => alert(error));
@@ -17,17 +20,12 @@
 
 <form
   id="form-tilaa"
+  bind:this={form}
   name="contact"
-  method="POST"
   data-netlify="true"
-  on:submit|preventDefault={handleSubmit}
+  on:submit={handleSubmit}
 >
-  <input type="hidden" name="TTT-kartoitus" value="contact" />
-  <p class="sshh">
-    <label>
-      Don’t fill this out if you’re human: <input name="bot-field" />
-    </label>
-  </p>
+  <input type="hidden" name="form-name" value="contact" />
   <input
     type="text"
     id="domain"
@@ -45,15 +43,6 @@
     placeholder="Sähköposti"
     required
   />
-  <!-- 
-<div
-  class="g-recaptcha"
-  data-sitekey="6LetmZ4mAAAAAP9hUNrHQNI9xlT60RivVMbxi_V6"
-/>
-
-<div id="recaptchaError" style="color: red; display: none;">
-  Please complete the reCAPTCHA
-</div> -->
 
   <input type="submit" value="Tilaa!" name="submit" />
 </form>
