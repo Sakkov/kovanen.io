@@ -19,7 +19,6 @@
   id="form-tilaa"
   name="contact"
   method="POST"
-  data-netlify-recaptcha="true"
   action="/kiitos"
   data-netlify="true"
   on:submit|preventDefault={handleSubmit}
