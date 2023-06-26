@@ -2,19 +2,16 @@
   // @ts-ignore
     async function handleSubmit(event) {
         const form = event.target;
+        const data = new FormData(form);
 
-        const res = await fetch('/', {
+        await fetch('/',{
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: new URLSearchParams(new FormData(form)).toString()
-        });
-
-        if (res.ok) {
-            // Redirect to /kiitos if submission is successful
-            location.href = '/kiitos';
-        } else {
-            alert('Form submission failed');
-        }
+            // @ts-ignore
+            body: new URLSearchParams(data).toString()
+        })
+        .then(() => location.href = '/kiitos')
+        .catch((error) => alert(error));
     }
 </script>
 
