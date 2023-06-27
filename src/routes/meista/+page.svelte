@@ -5,11 +5,17 @@
   import searchConsole from "$lib/images/search_console_ss_w360.webp";
   import kyberSecurity from "$lib/images/kybersecurity_lock_w360.webp";
   import bullseye from "$lib/images/bullseye_w360.webp";
+  import konsultointi from "$lib/images/konsultointi_w360.webp";
+  import tekoaly from "$lib/images/ai_grid_w360.webp";
+  import maple from "$lib/images/maple_w360.webp";
 </script>
 
 <svelte:head>
-  <title>Meistä</title>
-  <meta name="description" content="Meistä" />
+  <title>Teknologiapalveluyritys Kovanen.io</title>
+  <meta
+    name="description"
+    content="Kovanen.io on teknologiapalveluyritys, joka on omistautunut auttamaan asiakkaitaan menestymään digitaalisessa maailmassa."
+  />
 </svelte:head>
 
 <section id="home">
@@ -128,43 +134,96 @@
         </div>
       </div>
       <div class="block">
-        <h3>Konsultointi</h3>
-        <p>
-          Tarjoamme konsultointipalveluja auttaaksemme yritystäsi navigoimaan
-          digitaalisessa maisemassa.
-        </p>
+        <div class="block-grid">
+          <img src={konsultointi} alt="Iloinen konsultoija." />
+          <div>
+            <h3>Konsultointi</h3>
+            <p>
+              Tarjoamme konsultointipalveluja auttaaksemme yritystäsi
+              navigoimaan digitaalisessa maisemassa. 🧭
+              <br />
+              <a href="/konsultointi">Lue lisää</a>
+            </p>
+          </div>
+        </div>
       </div>
       <div class="block">
-        <h3>Tekoäly ja koneoppiminen</h3>
-        <p>
-          Hyödynnämme tekoälyn ja koneoppimisen uusimpia teknologioita
-          auttaaksemme yritystäsi saavuttamaan tavoitteensa.
-        </p>
+        <div class="block-grid">
+          <div>
+            <h3>Tekoäly ja koneoppiminen</h3>
+            <p>
+              Hyödynnämme tekoälyn ja koneoppimisen uusimpia teknologioita
+              auttaaksemme yritystäsi saavuttamaan tavoitteensa. 🤖
+              <br />
+              <a href="/ai">Lue lisää</a>
+            </p>
+          </div>
+          <img
+            src={tekoaly}
+            alt="Tekoälyllä generoituja kuvia tekoäly roboteista."
+          />
+        </div>
       </div>
       <div class="block">
-        <h3>IoT</h3>
-        <p>
-          IoT:n avulla voimme auttaa yritystäsi hyödyntämään älykkäiden
-          laitteiden tarjoamia mahdollisuuksia.
-        </p>
+        <div class="block-grid">
+          <img
+            src={maple}
+            alt="MAPLE (Modular Automated Plant Life Enclosure) on modulaarinen IoT laite, joka on suunniteltu kasvien kasvatukseen."
+            width="360"
+            height="270"
+          />
+          <div>
+            <h3>IoT</h3>
+            <p>
+              IoT:n avulla voimme auttaa yritystäsi hyödyntämään älykkäiden
+              laitteiden tarjoamia mahdollisuuksia. 📡
+              <br />
+              <a href="/iot">Lue lisää</a>
+            </p>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="call2action">
+  <div class="content">
+    <h2>Tehdään teknologiasta liittolaisesi.</h2>
     <p>
-      Yrityksemme tehtävä on auttaa sinua keskittymään siihen, missä olet
-      parhaimmillasi. Ota yhteyttä meihin ja selvitetään, miten voimme auttaa
-      sinua menestymään.
+      Kovanen.io:n tehtävä on tehdä sinun elämästäsi helpompaa ja auttaa sinua
+      keskittymään siihen, missä olet parhaimmillasi. Olemme täällä sinua varten
+      – ota yhteyttä tänään, ja löydämme yhdessä parhaat ratkaisut juuri sinun
+      tarpeisiisi.
     </p>
+    <div class="contact">
+      <h3>
+        Ota Yhteyttä!
+      </h3>
+      <ul>
+        <li>
+          <a href="mailto:saku@kovanen.io">saku@kovanen.io</a>
+        </li>
+        <li>
+          <a href="tel:+358442365454">044 236 5454</a>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <style>
-  section#home {
-    text-align: center;
+  section {
+    padding: 1rem;
   }
 
-  section#home .content {
+  section .content {
     max-width: 800px;
     margin: 0 auto;
+  }
+
+  section#home {
+    text-align: center;
   }
 
   section#home h1 {
@@ -228,6 +287,37 @@
     justify-items: center;
   }
 
+  section#call2action .content {
+    background-color: var(--MediumLightColor1);
+    padding: 2rem;
+    border-radius: 24px;
+  }
+
+  section#call2action .contact {
+    width: max-content;
+    color: var(--LightColor1);
+    background-color: var(--HighLightColor1);
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 24px;
+    font-size: 1rem;
+    position: relative;
+    transform: translateY(50%) scale(1.5);
+  }
+
+  section#call2action .contact a {
+    color: var(--LightColor1);
+    text-decoration: none;
+  }
+
+  section#call2action .contact a:hover {
+    color: var(--HighLightColor2light);
+  }
+
+  li {
+    list-style: none;
+  }
+
   /* Small screens */
   @media only screen and (max-width: 480px) {
     .block-grid {
@@ -243,7 +333,6 @@
 
     .block img {
       width: 240px;
-      height: 240px;
     }
   }
 </style>
