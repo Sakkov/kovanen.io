@@ -2,7 +2,7 @@
 
 Welcome to the repository of [kovanen.io](https://www.kovanen.io), the digital presence of my IT-consulting company. We specialize in providing services ranging from web development to cybersecurity, IT support, and AI & Machine Learning consultation.
 
-![Banner](images/kovanenio.png)
+![Banner](images/kovanenio.jpg)
 
 ## 💼 What we do
 
