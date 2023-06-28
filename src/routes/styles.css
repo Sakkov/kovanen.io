@@ -151,11 +151,11 @@ a img:hover {
 /* END SCROLL INDICATOR */
 
 
-.only-large {
+.onGT768 {
     display: block;
 }
 
-.medium-and-smaller {
+.onST768 {
     display: none;
 }
 
@@ -167,50 +167,14 @@ a img:hover {
     display: none;
 }
 
+.sshh {
+    display: none;
+}
+
 /* MEDIUM DISPLAY STYLES */
 @media screen and (max-width: 960px) {
     body {
         font-size: 18px;
-    }
-
-    section#peukku .content {
-        display: block;
-    }
-
-    section#peukku img {
-        width: 100%;
-        max-width: 360px;
-        transform: translateX(0);
-        margin: 20px auto;
-    }
-
-    section#peukku .text-container {
-        justify-content: center;
-    }
-
-    section#peukku .text {
-        width: 100%;
-    }
-
-    section#it-tuki .img-container {
-        margin: 0;
-    }
-
-    section#it-tuki img {
-        transform: scale(1);
-        max-width: 100%;
-    }
-
-    section#it-tuki .text {
-        max-width: 100%;
-    }
-
-    .only-large {
-        display: none;
-    }
-
-    .medium-and-smaller {
-        display: block;
     }
 }
 
@@ -259,10 +223,14 @@ a img:hover {
         border-radius: 24px;
         padding: 20px;
     }
-}
 
-.sshh {
-    display: none;
+    .onGT768 {
+        display: none;
+    }
+
+    .onST768 {
+        display: block;
+    }
 }
 /* END SMALL DISPLAY STYLES */
 
@@ -295,9 +263,5 @@ a img:hover {
     
     .g-recaptcha {
         transform: scale(0.8);
-    }
-
-    .ssshh {
-        display: none;
     }
 }

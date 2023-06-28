@@ -63,15 +63,11 @@
         <h3>
           <a href="mailto:saku@kovanen.io">saku@kovanen.io</a>
         </h3>
+        <img src={peukku360} alt="Iloinen web kehitys" class="onST768" />
       </div>
     </div>
     <div class="img-container">
-      <img src={peukku} alt="Iloinen it-tuki" class="only-large" />
-      <img
-        src={peukku360}
-        alt="Iloinen web kehitys"
-        class="medium-and-smaller"
-      />
+      <img src={peukku} alt="Iloinen it-tuki" class="onGT768" />
     </div>
   </div>
 </section>
@@ -152,14 +148,14 @@
             alt="it-tuki"
             width="500"
             height="375"
-            class="only-large"
+            class="onGT768"
           />
           <img
             src={itTuki360}
             alt="it-tuki"
             width="360"
             height="270"
-            class="medium-and-smaller"
+            class="onST768"
           />
         </div>
         <h3>
@@ -271,4 +267,44 @@
     width: max-content;
     height: max-content;
   }
+
+  /* MEDIUM DISPLAY STYLES */
+  @media screen and (max-width: 960px) {
+    section#peukku img {
+      width: 200%;
+      transform: translateX(-50%);
+    }
+
+    section#peukku .text-container {
+      justify-content: center;
+    }
+
+    section#it-tuki .img-container {
+      margin: 0;
+    }
+
+    section#it-tuki img {
+      transform: scale(1);
+      max-width: 100%;
+    }
+
+    section#it-tuki .text {
+      max-width: 100%;
+    }
+  }
+
+  /* SMALL DISPLAY STYLES */
+  @media screen and (max-width: 768px) {
+    section#peukku img {
+      width: 100%;
+      max-width: 360px;
+      transform: translateX(0);
+      margin: 20px auto 0 auto;
+    }
+
+    section#peukku .content {
+      display: block;
+    }
+  }
+  /* END SMALL DISPLAY STYLES */
 </style>
