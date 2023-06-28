@@ -20,7 +20,6 @@
 </script>
 
 <svelte:head>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>
   <meta name="description" content="kovanen" />
 </svelte:head>
