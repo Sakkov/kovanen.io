@@ -1,16 +1,20 @@
-import { c as create_ssr_component, d as add_attribute, v as validate_component } from "../../chunks/index.js";
+import { c as create_ssr_component, b as add_attribute, v as validate_component } from "../../chunks/index.js";
+const TTTform_svelte_svelte_type_style_lang = "";
+const css$1 = {
+  code: 'input.svelte-32aqpa{width:700px;max-width:100%;padding:10px;border-radius:24px;font-size:1.2em;border:none;text-align:center;margin:5px 0}input.svelte-32aqpa:focus{outline:var(--HighLightColor3) auto 1px}input[type="submit"].svelte-32aqpa{background-color:var(--HighLightColor1);color:var(--LightColor1);font-weight:bold;cursor:pointer;width:auto}input[type="submit"].svelte-32aqpa:hover{background-color:var(--HighLightColor3)}',
+  map: null
+};
 const TTTform = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `<form id="form-tilaa" name="contact" method="POST" data-netlify="true"><input type="hidden" name="TTT-kartoitus" value="contact">
-  <p class="sshh"><label>Don’t fill this out if you’re human: <input name="bot-field"></label></p>
-  <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required>
+  let form;
+  $$result.css.add(css$1);
+  return `<form id="form-tilaa" name="contact" data-netlify="true"${add_attribute("this", form, 0)}><input type="hidden" name="form-name" value="contact" class="svelte-32aqpa">
+  <input type="text" id="domain" name="domain" placeholder="verkkotunnuksesi" required class="svelte-32aqpa">
   <div class="form-helper-note">esim. <a href="https://fiksukuljetus.com">fiksukuljetus.com</a></div>
-  <input type="email" id="email" name="email" placeholder="Sähköposti" required>
-  
+  <input type="email" id="email" name="email" placeholder="Sähköposti" required class="svelte-32aqpa">
 
-  <input type="submit" value="Tilaa!" name="submit">
+  <input type="submit" value="Tilaa!" name="submit" class="svelte-32aqpa">
 </form>`;
 });
-const arrowDown = "/_app/immutable/assets/arrow-down.c1ecb22a.svg";
 const peukku = "/_app/immutable/assets/mainoskuva12_4_2022.7c232bd3.webp";
 const peukku360 = "/_app/immutable/assets/mainoskuva12_4_2022_w360.c7073450.webp";
 const verkkosivu1 = "/_app/immutable/assets/1_q80_320x180.00f3d91a.webp";
@@ -25,20 +29,17 @@ const itTuki = "/_app/immutable/assets/it-tuki.689c3426.webp";
 const itTuki360 = "/_app/immutable/assets/it-tuki_w360.28ac1c6b.webp";
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "section#home.svelte-1ths8o5{text-align:center}.scroll-indicator.svelte-1ths8o5{position:fixed;bottom:10px;left:50%;transform:translateX(-50%);font-size:2em;z-index:100}",
+  code: "section#home.svelte-1x5scld.svelte-1x5scld.svelte-1x5scld{text-align:center}section#tilaa.svelte-1x5scld.svelte-1x5scld.svelte-1x5scld{background-color:var(--MediumLightColor1);color:var(--DarkColor1)}section#peukku.svelte-1x5scld.svelte-1x5scld.svelte-1x5scld{background-color:var(--MediumDarkColor1);color:var(--DarkColor1);line-height:normal}section#peukku.svelte-1x5scld .content.svelte-1x5scld.svelte-1x5scld{display:grid;grid-template-columns:1fr 1fr;max-width:2000px}section#peukku.svelte-1x5scld .img-container.svelte-1x5scld.svelte-1x5scld{height:100%;display:flex;align-items:center}section#peukku.svelte-1x5scld img.svelte-1x5scld.svelte-1x5scld{width:140%;transform:translateX(-40%);border-radius:24px}section#peukku.svelte-1x5scld .text-container.svelte-1x5scld.svelte-1x5scld{display:flex;align-items:center;justify-content:center}section#peukku.svelte-1x5scld .text.svelte-1x5scld.svelte-1x5scld{z-index:2;background-color:var(--LightColor1);padding:20px;border-radius:24px;width:max-content;height:max-content}section#peukku.svelte-1x5scld .text.svelte-1x5scld h2.svelte-1x5scld{margin:20px 0}section#verkkosivuja.svelte-1x5scld.svelte-1x5scld.svelte-1x5scld{background-color:var(--MediumLightColor1)}section#verkkosivuja.svelte-1x5scld a.svelte-1x5scld.svelte-1x5scld{text-decoration:none}section#verkkosivuja.svelte-1x5scld img.svelte-1x5scld.svelte-1x5scld{border-radius:24px}section#it-tuki.svelte-1x5scld.svelte-1x5scld.svelte-1x5scld{background-color:var(--LightColor1);color:var(--LightColor1)}section#it-tuki.svelte-1x5scld .img-container.svelte-1x5scld.svelte-1x5scld{display:flex;align-items:center;justify-content:center;margin:100px 0}section#it-tuki.svelte-1x5scld img.svelte-1x5scld.svelte-1x5scld{height:auto;border-radius:24px;max-width:100vh;transform:scale(1.4)}section#it-tuki.svelte-1x5scld .text-container.svelte-1x5scld.svelte-1x5scld{display:flex;align-items:center;justify-content:center;max-width:600px;margin:auto}section#it-tuki.svelte-1x5scld .text.svelte-1x5scld.svelte-1x5scld{z-index:2;background-color:var(--MediumDarkColor1);padding:20px;border-radius:24px;width:max-content;height:max-content}",
   map: null
 };
 const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
   return `${$$result.head += `<!-- HEAD_svelte-1ekmwi4_START --><script src="https://www.google.com/recaptcha/api.js" async defer><\/script>${$$result.title = `<title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>`, ""}<meta name="description" content="kovanen"><!-- HEAD_svelte-1ekmwi4_END -->`, ""}
 
-<div id="scrollIndicator"></div>
-<div class="scroll-indicator svelte-1ths8o5"><span><img${add_attribute("src", arrowDown, 0)} alt="scroll down" width="50" height="50"></span></div>
-
-<section id="home" class="svelte-1ths8o5"><div class="content"><h1>kovanen.io</h1>
+<section id="home" class="svelte-1x5scld"><div class="content"><h1>kovanen.io</h1>
     <p>jotta voisit keskittyä, siihen missä olet parhaimmillasi.</p></div></section>
 
-<section id="tilaa"><div class="content"><h2>Tilaa ilmainen verkkosivujen T<sup>3</sup> kartoitus!
+<section id="tilaa" class="svelte-1x5scld"><div class="content"><h2>Tilaa ilmainen verkkosivujen T<sup>3</sup> kartoitus!
     </h2>
     <h3><strong>T</strong>ehokkuus, <strong>T</strong>oimivuus ja
       <strong>T</strong>urvallisuus.
@@ -48,39 +49,39 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     </p>
     ${validate_component(TTTform, "Form").$$render($$result, {}, {}, {})}</div></section>
 
-<section id="peukku"><div class="content"><div class="text-container"><div class="text"><h3>Missä sinä tarvitsisit apua?</h3>
-        <h2>IT-tuki</h2>
-        <h2>verkkosivut</h2>
-        <h2>verkkomainostus</h2>
-        <h2>hakukone optimointi</h2>
-        <h2>kyberturvallisuus</h2>
-        <h2>konsultointi</h2>
-        <h2>tekoäly ja koneoppiminen</h2>
+<section id="peukku" class="svelte-1x5scld"><div class="content svelte-1x5scld"><div class="text-container svelte-1x5scld"><div class="text svelte-1x5scld"><h3>Missä sinä tarvitsisit apua?</h3>
+        <h2 class="svelte-1x5scld">IT-tuki</h2>
+        <h2 class="svelte-1x5scld">verkkosivut</h2>
+        <h2 class="svelte-1x5scld">verkkomainostus</h2>
+        <h2 class="svelte-1x5scld">hakukone optimointi</h2>
+        <h2 class="svelte-1x5scld">kyberturvallisuus</h2>
+        <h2 class="svelte-1x5scld">konsultointi</h2>
+        <h2 class="svelte-1x5scld">tekoäly ja koneoppiminen</h2>
         <h3><a href="mailto:saku@kovanen.io">saku@kovanen.io</a></h3></div></div>
-    <div class="img-container"><img${add_attribute("src", peukku, 0)} alt="Iloinen it-tuki" class="only-large">
-      <img${add_attribute("src", peukku360, 0)} alt="Iloinen web kehitys" class="medium-and-smaller"></div></div></section>
+    <div class="img-container svelte-1x5scld"><img${add_attribute("src", peukku, 0)} alt="Iloinen it-tuki" class="only-large svelte-1x5scld">
+      <img${add_attribute("src", peukku360, 0)} alt="Iloinen web kehitys" class="medium-and-smaller svelte-1x5scld"></div></div></section>
 
-<section id="verkkosivuja"><div class="content"><h2>Rakennamme verkkosivuja, jotka toimivat.</h2>
-    <div class="img-container"><a href="https://sakukovanen.fi"><img${add_attribute("src", verkkosivu1, 0)} alt="Saku Kovanen Portfolio" width="300" height="180">
+<section id="verkkosivuja" class="svelte-1x5scld"><div class="content"><h2>Rakennamme verkkosivuja, jotka toimivat.</h2>
+    <div class="img-container"><a href="https://sakukovanen.fi" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu1, 0)} alt="Saku Kovanen Portfolio" width="300" height="180" class="svelte-1x5scld">
         </a>
-      <a href="https://fiksukuljetus.com"><img${add_attribute("src", verkkosivu2, 0)} alt="Muutto Tampere" width="300" height="180">
+      <a href="https://fiksukuljetus.com" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu2, 0)} alt="Muutto Tampere" width="300" height="180" class="svelte-1x5scld">
         </a>
-      <a href="https://haikangrilli.fi"><img${add_attribute("src", verkkosivu3, 0)} alt="Grilli Pirkkala" width="300" height="180">
+      <a href="https://haikangrilli.fi" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu3, 0)} alt="Grilli Pirkkala" width="300" height="180" class="svelte-1x5scld">
         </a>
-      <a href="https://kauvanto.fi"><img${add_attribute("src", verkkosivu4, 0)} alt="Isännöinti Helsinki" width="300" height="180">
+      <a href="https://kauvanto.fi" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu4, 0)} alt="Isännöinti Helsinki" width="300" height="180" class="svelte-1x5scld">
         </a>
-      <a href="htpps://kauvanto.com"><img${add_attribute("src", verkkosivu5, 0)} alt="Psykoterapia Oulu" width="300" height="180">
+      <a href="htpps://kauvanto.com" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu5, 0)} alt="Psykoterapia Oulu" width="300" height="180" class="svelte-1x5scld">
         </a>
-      <a href="https://mary-mc-donald-rissanen.com"><img${add_attribute("src", verkkosivu6, 0)} alt="Finnish-Canadian writer" width="300" height="180">
+      <a href="https://mary-mc-donald-rissanen.com" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu6, 0)} alt="Finnish-Canadian writer" width="300" height="180" class="svelte-1x5scld">
         </a>
-      <a href="https://randombible.kovanen.io"><img${add_attribute("src", verkkosivu7, 0)} alt="random bible verse" width="300" height="180">
+      <a href="https://randombible.kovanen.io" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu7, 0)} alt="random bible verse" width="300" height="180" class="svelte-1x5scld">
         </a>
-      <a href="https://wiki.kovanen.io"><img${add_attribute("src", verkkosivu8, 0)} alt="suomi wiki" width="300" height="180">
+      <a href="https://wiki.kovanen.io" class="svelte-1x5scld"><img${add_attribute("src", verkkosivu8, 0)} alt="suomi wiki" width="300" height="180" class="svelte-1x5scld">
         </a></div></div></section>
 
-<section id="it-tuki"><div class="content"><div class="text-container"><div class="text"><h2>IT-tuki asiantuntemusta</h2>
-        <div class="img-container"><img${add_attribute("src", itTuki, 0)} alt="it-tuki" width="500" height="375" class="only-large">
-          <img${add_attribute("src", itTuki360, 0)} alt="it-tuki" width="360" height="270" class="medium-and-smaller"></div>
+<section id="it-tuki" class="svelte-1x5scld"><div class="content"><div class="text-container svelte-1x5scld"><div class="text svelte-1x5scld"><h2 class="svelte-1x5scld">IT-tuki asiantuntemusta</h2>
+        <div class="img-container svelte-1x5scld"><img${add_attribute("src", itTuki, 0)} alt="it-tuki" width="500" height="375" class="only-large svelte-1x5scld">
+          <img${add_attribute("src", itTuki360, 0)} alt="it-tuki" width="360" height="270" class="medium-and-smaller svelte-1x5scld"></div>
         <h3>Mikään ongelma ei ole liian pieni tai liian suuri. Autamme sinua
           kaikissa IT-tuki asioissa.
         </h3></div></div></div>

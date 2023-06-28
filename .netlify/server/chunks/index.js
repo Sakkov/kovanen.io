@@ -107,9 +107,9 @@ function add_attribute(name, value, boolean) {
 }
 export {
   setContext as a,
-  subscribe as b,
+  add_attribute as b,
   create_ssr_component as c,
-  add_attribute as d,
+  subscribe as d,
   escape as e,
   getContext as g,
   missing_component as m,
