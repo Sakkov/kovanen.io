@@ -5,6 +5,7 @@
   import Form from "./TTTform.svelte";
 
   // import images
+  import logo from "$lib/images/kovanenio_text_black.png";
   import peukku from "$lib/images/mainoskuva12_4_2022.webp";
   import peukku360 from "$lib/images/mainoskuva12_4_2022_w360.webp";
   import verkkosivu1 from "$lib/images/screenshots/1_q80_320x180.webp";
@@ -26,7 +27,7 @@
 
 <section id="home">
   <div class="content">
-    <h1>kovanen.io</h1>
+    <h1><img src={logo} alt="kovanen.io"></h1>
     <p>jotta voisit keskittyä, siihen missä olet parhaimmillasi.</p>
   </div>
 </section>
@@ -63,11 +64,23 @@
         <h3>
           <a href="mailto:saku@kovanen.io">saku@kovanen.io</a>
         </h3>
-        <img src={peukku360} alt="Iloinen web kehitys" class="onST768" />
+        <img
+          src={peukku360}
+          alt="Iloinen web kehitys"
+          class="onST768"
+          width="360"
+          height="270"
+        />
       </div>
     </div>
     <div class="img-container">
-      <img src={peukku} alt="Iloinen it-tuki" class="onGT768" />
+      <img
+        src={peukku}
+        alt="Iloinen it-tuki"
+        class="onGT768"
+        width="1200"
+        height="900"
+      />
     </div>
   </div>
 </section>
@@ -197,6 +210,7 @@
 
   section#peukku img {
     width: 140%;
+    height: auto;
     transform: translateX(-40%);
     border-radius: 24px;
   }

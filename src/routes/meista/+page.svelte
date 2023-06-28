@@ -101,7 +101,12 @@
       </div>
       <div class="block">
         <div class="block-grid">
-          <img src={kyberSecurity} alt="Kyberturvallisuutta kuvaava lukko" />
+          <img
+            src={kyberSecurity}
+            alt="Kyberturvallisuutta kuvaava lukko"
+            width="360"
+            height="360"
+          />
           <div>
             <h3>Kyberturvallisuus</h3>
             <p>
@@ -135,7 +140,12 @@
       </div>
       <div class="block">
         <div class="block-grid">
-          <img src={konsultointi} alt="Iloinen konsultoija." />
+          <img
+            src={konsultointi}
+            alt="Iloinen konsultoija."
+            width="360"
+            height="360"
+          />
           <div>
             <h3>Konsultointi</h3>
             <p>
@@ -161,6 +171,8 @@
           <img
             src={tekoaly}
             alt="Tekoälyllä generoituja kuvia tekoäly roboteista."
+            width="360"
+            height="360"
           />
         </div>
       </div>
@@ -197,9 +209,7 @@
       tarpeisiisi.
     </p>
     <div class="contact">
-      <h3>
-        Ota Yhteyttä!
-      </h3>
+      <h3>Ota Yhteyttä!</h3>
       <ul>
         <li>
           <a href="mailto:saku@kovanen.io">saku@kovanen.io</a>
