@@ -52,6 +52,6 @@
     left: 50%;
     transform: translateX(-50%);
     font-size: 2em;
-    z-index: 100;
+    z-index: 2;
   }
 </style>

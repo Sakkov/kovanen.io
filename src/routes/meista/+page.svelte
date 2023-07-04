@@ -1,5 +1,4 @@
 <script>
-  import itTukiMeme from "$lib/images/it-tuki_meme.webp";
   import itTukiMeme360 from "$lib/images/it-tuki_meme_w360.webp";
   import etusivuSS360 from "$lib/images/kovanenio_etusivu_ss_w360.webp";
   import searchConsole from "$lib/images/search_console_ss_w360.webp";
@@ -223,10 +222,6 @@
 </section>
 
 <style>
-  section {
-    padding: 1rem;
-  }
-
   section .content {
     max-width: 800px;
     margin: 0 auto;

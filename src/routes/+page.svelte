@@ -5,7 +5,7 @@
   import Form from "./TTTform.svelte";
 
   // import images
-  import logo from "$lib/images/kovanenio_text_black.png";
+  import logo_text from "$lib/images/kovanenio_text_black.png";
   import peukku from "$lib/images/mainoskuva12_4_2022.webp";
   import peukku360 from "$lib/images/mainoskuva12_4_2022_w360.webp";
   import verkkosivu1 from "$lib/images/screenshots/1_q80_320x180.webp";
@@ -28,7 +28,7 @@
 <section id="home">
   <div class="content">
     <h1>
-      <img src={logo} alt="kovanen.io" width="548" height="78" />
+      <img src={logo_text} alt="kovanen.io" width="548" height="78" />
     </h1>
     <p>jotta voisit keskittyä, siihen missä olet parhaimmillasi.</p>
   </div>
