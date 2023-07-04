@@ -36,7 +36,6 @@
       stroke="currentColor"
       stroke-width="5"
       stroke-linecap="round"
-      width="auto"
     >
       <path
         class="top"

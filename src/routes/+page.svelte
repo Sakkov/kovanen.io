@@ -117,7 +117,7 @@
         />
         <!-- Isännöinti Kauvanto -->
       </a>
-      <a href="htpps://kauvanto.com">
+      <a href="https://kauvanto.com">
         <img
           src={verkkosivu5}
           alt="Psykoterapia Oulu"
@@ -126,7 +126,7 @@
         />
         <!-- Psykoterapiapalvelu Kauvanto -->
       </a>
-      <a href="https://mary-mc-donald-rissanen.com">
+      <a href="https://www.mary-mcdonald-rissanen.com/">
         <img
           src={verkkosivu6}
           alt="Finnish-Canadian writer"
@@ -135,7 +135,7 @@
         />
         <!-- Mary McDonald-Rissanen -->
       </a>
-      <a href="https://randombible.kovanen.io">
+      <a href="https://random-bible.kovanen.io/">
         <img
           src={verkkosivu7}
           alt="random bible verse"
