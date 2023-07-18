@@ -1,6 +1,6 @@
 <script>
   import { page } from "$app/stores";
-  import { fade, fly, draw } from "svelte/transition";
+  import { fade, fly, draw, slide } from "svelte/transition";
   import logo from "$lib/images/kovanenio_logo_black.png";
   let links = [
     { name: "Etusivu", href: "/" },
@@ -17,9 +17,14 @@
   let ariaLabel = "toggle menu";
 </script>
 
-<nav>
+
+<nav
+transition:fade={{ duration: 500 }}
+>
   <div class="logo">
-    <a href="/">
+    <a 
+    transition:fade={{ duration: 500, delay: 500 }}
+    href="/">
       <img src={logo} alt="Kovanen.io" width="69" height="69" />
     </a>
   </div>
@@ -28,6 +33,7 @@
     on:click={toggleMenu}
     aria-expanded={showMenu}
     aria-label={ariaLabel}
+    transition:fade={{ duration: 500, delay: 500 }}
   >
     <svg
       class:open={showMenu}
@@ -50,7 +56,7 @@
   </button>
 
   <!-- Desktop Navigation -->
-  <div class="links desktop-links">
+  <div class="links desktop-links" transition:fly={{delay: 1000, duration: 500, x: 100}}>
     <ul>
       {#each links as link (link.href)}
         <li id={link.href == "/#tilaa" ? "nav-highlight" : ""}>
