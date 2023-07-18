@@ -90,7 +90,9 @@
         <li>
           <a href="https://kovanen.io">kovanen.io</a>
         </li>
-        <li>3261924-6</li>
+        <li>
+          <a href="https://tietopalvelu.ytj.fi/yritys/3261924-6">3261924-6</a>
+        </li>
       </ul>
     </div>
   </div>
