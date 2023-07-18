@@ -51,7 +51,7 @@
 </section>
 
 <section id="tilaa">
-	<div use:inview={options} on:inview_enter={() => (tilaaIsInView = true)}>
+	<div class="content" use:inview={options} on:inview_enter={() => (tilaaIsInView = true)}>
 		{#if tilaaIsInView}
 			<div transition:fade={{ duration: 1000 }}>
 				<h2>
