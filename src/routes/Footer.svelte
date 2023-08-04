@@ -67,6 +67,9 @@
         <li>
           <a href="https://wiki.kovanen.io">wiki.kovanen.io</a>
         </li>
+        <li>
+          <a href="https://fingpt.fi">fingpt.fi</a>
+        </li>
       </ul>
     </div>
     <div class="text">

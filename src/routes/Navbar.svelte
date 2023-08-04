@@ -6,6 +6,7 @@
     { name: "Etusivu", href: "/" },
     { name: "Meistä", href: "/meista" },
     { name: "Palvelut", href: "/meista/#palvelut" },
+    { name: "FinGPT", href: "https://fingpt.fi" , target: "_blank", style: "color: var(--HighLightColor3); font-weight: 900;"},
     { name: "Ilmainen Verkkosivujen Kartoitus", href: "/#tilaa" },
   ];
 
@@ -63,6 +64,8 @@ transition:fade={{ duration: 500 }}
           <a
             class={$page.url.pathname === link.href ? "active" : ""}
             href={link.href}
+            target="{link.target}"
+            style="{link.style}"
           >
             {link.name}
           </a>
@@ -88,6 +91,8 @@ transition:fade={{ duration: 500 }}
               class={$page.url.pathname === link.href ? "active" : ""}
               href={link.href}
               on:click={toggleMenu}
+              target="{link.target}"
+              style="{link.style}"
             >
               {link.name}
             </a>
