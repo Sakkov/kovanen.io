@@ -1,0 +1,29 @@
+section.article-route h2 {
+  font-size: 2em;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: var(--HighLightColor1);
+}
+
+section.article-route p {
+  font-size: 1.5em;
+  color: var(--MediumDarkColor1);
+  text-align: left;
+}
+
+section.article-route p + p {
+  text-indent: 2em;
+}
+
+section.article-route h3 {
+  color: var(--HighLightColor1);
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+section.article-route li {
+  font-size: 1.5em;
+  color: var(--MediumDarkColor1);
+  text-align: left;
+  margin-left: 1.5em;
+}
