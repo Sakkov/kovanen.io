@@ -49,7 +49,13 @@ ${urls
     (url) => `  <url>
     <loc>${url}</loc>
     <lastmod>${new Date().toISOString()}</lastmod>
-    <changefreq>weekly</changefreq>
+    <changefreq>${
+      url == domain
+        ? "weekly"
+        : url.includes("article")
+        ? "yearly"
+        : "monthly"
+    }</changefreq>
     <priority>${
       url == domain
         ? "1.0"
