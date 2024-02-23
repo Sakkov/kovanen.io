@@ -33,7 +33,7 @@
 </script>
 
 <svelte:head>
-	<title>verkkosivut it-tuki konsultointi kyberturvallisuus | kovanen.io</title>
+	<title>Tekoäly, verkkosivut, it-tuki, konsultointi ja kyberturvallisuus | kovanen.io</title>
 	<meta name="description" content="kovanen" />
 </svelte:head>
 
