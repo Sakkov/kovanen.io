@@ -7,8 +7,9 @@ const domain = "https://kovanen.io";
 const srcDir = "./src/routes";
 
 function toUrlPath(routePath) {
-  const trimmedSrcDir = srcDir.replace("./", "").replace("/", "\\");
-  const url = routePath.replace(trimmedSrcDir, "").replace("+page.svelte", "").replaceAll(" ", "%20").replaceAll("\\", "/").slice(0, -1);
+  const trimmedSrcDir1 = srcDir.replace("./", "").replace("/", "\\");
+  const trimmedSrcDir2 = srcDir.replace("./", "").replace("\\", "/");
+  const url = routePath.replace(trimmedSrcDir1, "").replace(trimmedSrcDir2, "").replace("+page.svelte", "").replaceAll(" ", "%20").replaceAll("\\", "/").slice(0, -1);
 
   return domain + url;
 }
