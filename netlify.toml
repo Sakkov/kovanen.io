@@ -1,7 +1,3 @@
 [build]
   command = "npm run build"
   publish = "build"
-[[headers]]
-  for = "/*"
-  [headers.values]
-  Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://*.cloudfront.net 'unsafe-inline'; img-src 'self' https://*.cloudfront.net data:; font-src https://fonts.gstatic.com"

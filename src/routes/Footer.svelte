@@ -23,6 +23,9 @@
           <a href="/tiimi">Tiimi</a>
         </li>
         <li>
+          <a href="/articles">Artikkelit</a>
+        </li>
+        <li>
           <a href="/tietoturvaseloste">Tietoturvaseloste</a>
         </li>
       </ul>
