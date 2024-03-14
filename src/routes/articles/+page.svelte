@@ -11,7 +11,7 @@
     <div class="content">
         <div class="block">
             <h3>
-                {article.title}
+                {@html article.title}
             </h3>
             {#if article.date}
                 <span>{article.date}</span>
