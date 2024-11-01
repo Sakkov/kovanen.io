@@ -1,5 +1,17 @@
 <script>
+  import fiksu from "$lib/images/fiksu.svg";
+  import pohjolanpolte from "$lib/images/pohjolanpolte.png";
 </script>
+
+<section class="yhteistyossa">
+  <h2 style="color: black">Yhteistyössä:</h2>
+  <a href="https://fiksukuljetus.com/">
+    <img src={fiksu} alt="Fiksukuljetus" />
+  </a>
+  <a href="https://pohjolanpolte.fi/">
+    <img src={pohjolanpolte} alt="Pohjolanpolte" />
+  </a>
+</section>
 
 <footer>
   <div class="content">
@@ -70,6 +82,9 @@
         <li>
           <a href="https://wiki.kovanen.io">wiki.kovanen.io</a>
         </li>
+        <li>
+          <a href="https://fingpt.fi">fingpt.fi</a>
+        </li>
       </ul>
     </div>
     <div class="text">
@@ -100,17 +115,44 @@
     </div>
   </div>
   <div class="footer-cc">
-    <span>
-      © kovanen.io 2023 
-    </span>
+    <span> © kovanen.io 2023 </span>
     |
-    <a href="/tietoturvaseloste">
-      Tietoturvaseloste
-    </a>
+    <a href="/tietoturvaseloste"> Tietoturvaseloste </a>
   </div>
 </footer>
 
 <style>
+
+  .yhteistyossa {
+    min-height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin: 20px 0;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .yhteistyossa h2 {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .yhteistyossa a {
+    text-decoration: none;
+    width: 400px;
+    display: block;
+    text-align: center;
+  }
+
+  .yhteistyossa img {
+    max-height: 200px;
+    width: auto;
+    margin: 10px auto;
+  }
+
   footer {
     background-color: var(--MediumDarkColor1);
     color: var(--LightColor1);
