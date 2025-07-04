@@ -16,6 +16,10 @@
 	};
 </script>
 
+<svelte:head>
+	<meta name="facebook-domain-verification" content="oquas6wkw1mp7w73ha3ok6xorbej60" />
+</svelte:head>
+
 <div class="app" use:inview={options} on:inview_change={handleChange}>
 	<ScrollIndicators />
 
